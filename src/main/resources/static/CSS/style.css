@@ -28,3 +28,13 @@ h2{
     color: aliceblue;
     margin-top: 0px;
 }
+a{
+    background-color: rgba(246, 248, 91, 0.45);
+    color: aliceblue;
+    font-size: 3rem;
+
+}
+
+p{
+    text-align: center;
+}
