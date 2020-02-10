@@ -1,11 +1,30 @@
+body{
+    background-image: url(./potato.jpg);
+    background-repeat: no-repeat;
+    
+    background-size: 100vw 100vh;
+    
+
+}
 
 
 h1{
-    
+    padding-bottom: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-family: 'Saira Stencil One', cursive;
     text-align: center;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 5rem;
+    letter-spacing: 3px;
+    background-color: rgba(246, 248, 91, 0.45);
+    
 }
 
 h2{
     text-align: center;
+    background-color: rgba(246, 248, 91, 0.45);
+    color: aliceblue;
+    margin-top: 0px;
 }
