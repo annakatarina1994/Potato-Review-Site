@@ -24,3 +24,12 @@ p a:hover {
 
     border: 1px solid yellow;
 }
+
+.has,
+.cat {
+    text-decoration: none;
+    padding: 3rem;
+    font-size: 5rem;
+    border: 1px solid yellow;
+    background-color: rgba(246, 248, 91, 0.45);
+}
