@@ -1,0 +1,26 @@
+.links {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+
+}
+
+p a {
+    text-decoration: none;
+    padding: 3rem;
+    font-size: 5rem;
+    border: 1px solid yellow;
+    background-color: rgba(246, 248, 91, 0.45);
+}
+
+p a:hover {
+    font-weight: bolder;
+    transition: all 0.5s ease;
+}
+
+.heading {
+    background-color: rgba(246, 248, 91, 0.45);
+
+    border: 1px solid yellow;
+}
