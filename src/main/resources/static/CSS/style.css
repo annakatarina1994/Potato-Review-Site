@@ -1,4 +1,5 @@
 body {
+    overflow: auto;
     background-image: url(./potato.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
@@ -29,6 +30,15 @@ a {
     font-size: 1rem;
     font-family: sans-serif;
     font-variant: small-caps;
+    text-decoration: none;
+}
+
+.russetlink{
+    font-size: 2rem;
+}
+
+.fingerlinglink{
+    font-size: 2rem; 
 }
 
 a:hover {
@@ -53,11 +63,14 @@ a:hover {
 }
 
 .title {
-    text-align: center;
+    background-color: rgba(246, 248, 91, 0.45);
+    border: 1px solid yellow;
+    font-family: 'Saira Stencil One', cursive;
 }
 
-.link{
-    font-size: 1rem;
+.sidebarlinks{
+    background-color: rgba(246, 248, 91, 0.45);
+    border: 1px solid yellow;
 }
 
 .content{
@@ -87,6 +100,12 @@ a:hover {
     text-decoration: none;
 }
 
-.links{
+.mainpagelinks{
     text-align: center;
+}
+
+.heading {
+    background-color: rgba(246, 248, 91, 0.45);
+    border: 1px solid yellow;
+    font-family: 'Saira Stencil One', cursive;
 }
