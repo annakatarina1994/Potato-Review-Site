@@ -42,3 +42,15 @@ a {
 p {
     text-align: center;
 }
+
+.title {
+    background-color: green;
+}
+
+.link {
+    background-color: red;
+}
+
+.content {
+    background-color: blue;
+}

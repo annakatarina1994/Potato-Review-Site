@@ -1,12 +1,12 @@
 .links {
-    margin-top: 7rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 3rem;
-
+    grid-gap: 2rem;
 }
 
-p a {
+p {
     text-decoration: none;
     padding: 3rem;
     font-size: 5rem;
@@ -14,7 +14,12 @@ p a {
     background-color: rgba(246, 248, 91, 0.45);
 }
 
-p a:hover {
+p a {
+    text-decoration: none;
+    font-size: 4rem;
+}
+
+p:hover {
     font-weight: bolder;
     transition: all 0.5s ease;
 }
@@ -25,11 +30,8 @@ p a:hover {
     border: 1px solid yellow;
 }
 
-.has,
-.cat {
-    text-decoration: none;
-    padding: 3rem;
-    font-size: 5rem;
-    border: 1px solid yellow;
-    background-color: rgba(246, 248, 91, 0.45);
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
