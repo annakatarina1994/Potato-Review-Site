@@ -91,3 +91,13 @@ i {
 p {
     padding: 1rem;
 }
+
+.potato__categories{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.review__links{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
