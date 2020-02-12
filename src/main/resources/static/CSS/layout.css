@@ -1,11 +1,3 @@
-.mainpagelinks {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 3rem;
-    grid-gap: 2rem;
-}
-
 .container {
     display: grid;
     height: 98vh;
@@ -13,6 +5,21 @@
     grid-template-columns: 15% 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 4px;
+}
+
+.heading{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.mainpagelinks {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    grid-gap: 2rem;
 }
 
 .title{
@@ -71,11 +78,11 @@ i {
     color: blue;
 }
 
-body {
+/* body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: end;
-}
+} */
 
 .review__window h2 {
     margin-top: 1rem;
