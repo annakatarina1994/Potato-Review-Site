@@ -8,7 +8,7 @@
 
 .container {
     display: grid;
-    height: 100vh;
+    height: 98vh;
     width: 98vw;
     grid-template-columns: 15% 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -63,25 +63,17 @@
     font-family: sans-serif;
 }
 
-h4 {
-    color: gray;
-}
-
-i {
-    color: blue;
-}
-
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: end;
 }
 
-.review1 {
-    justify-self: end;
+.review__window {
+    justify-content: center;
 }
 
-.review1 h2 {
+.review__window h2 {
     margin-top: 1rem;
 }
 

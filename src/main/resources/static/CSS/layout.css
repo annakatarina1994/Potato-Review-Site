@@ -29,6 +29,9 @@
 .content{
     grid-column: 2/ span 2;
     grid-row: 2/ span 4;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    text-align: center;
 }
 
 .sublinks{
@@ -36,3 +39,48 @@
     grid-row-gap: .05rem;
 }
 
+/* Content Part*/
+
+.review__window {
+    justify-content: center;
+    opacity: 1;
+    height: auto;
+    width: auto;
+    border: 2px solid yellow;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    box-shadow: 1px 1px 0px 2px lighten(#000, 0.5);
+}
+
+.review__image {
+    background-image: url("russetreviewbanner.jpg");
+    height: 6rem;
+    background-size: cover;
+}
+
+.review__content {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+h4 {
+    color: gray;
+}
+
+i {
+    color: blue;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+}
+
+.review__window h2 {
+    margin-top: 1rem;
+}
+
+p {
+    padding: 1rem;
+}
