@@ -1,5 +1,4 @@
 body {
-    overflow: auto;
     background-image: url(./potato.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
@@ -108,4 +107,20 @@ a:hover {
     background-color: rgba(246, 248, 91, 0.45);
     border: 1px solid yellow;
     font-family: 'Saira Stencil One', cursive;
+}
+
+.homesidebar{
+    font-size: 1.5rem;
+}
+
+.categoriessidebar{
+    font-size: 1.5rem;
+}
+
+.hashtagsidebar{
+    font-size: 1.5rem;
+}
+
+.sublinks{
+    font-size: 1rem;
 }
