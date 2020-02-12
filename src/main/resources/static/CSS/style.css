@@ -141,3 +141,13 @@ i {
 .review__links a{
     font-size: 2rem;
 }
+
+.taglinks{
+    margin: 1rem auto;
+    width: 20rem;
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    border: 1px solid yellow;
+    background-color: rgba(246, 248, 91, 0.45);   
+}
