@@ -1,8 +1,11 @@
 package org.wecancodeit.reviews;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Collection;
 import java.util.HashMap;
 
+@Service
 public class MapCategoryStorage implements CategoryStorage {
     private HashMap<String, Category> categories;
 
