@@ -15,16 +15,16 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-public class CategoryControllerTest {
+public class ListControllerTest {
     private MockMvc mockMvc;
-    private CategoryController underTest;
-    private CategoryStorage mockStorage;
+    private ListController underTest;
+    private ListStorage mockStorage;
     private Model mockModel;
 
     @BeforeEach
     public void setUp() {
-        mockStorage = mock(CategoryStorage.class);
-        underTest = new CategoryController(mockStorage);
+        mockStorage = mock(ListStorage.class);
+        underTest = new ListController(mockStorage);
         mockMvc = MockMvcBuilders.standaloneSetup(underTest).build();
         mockModel = mock(Model.class);
     }
@@ -56,7 +56,7 @@ public class CategoryControllerTest {
     }
 
     @Test
-    public void categoryControllerShouldInstantiate() throws Exception {
+    public void listControllerShouldInstantiate() throws Exception {
         Category testCategory = new Category("Big");
 
         List<Category> categoryCollection = Collections.singletonList((testCategory));

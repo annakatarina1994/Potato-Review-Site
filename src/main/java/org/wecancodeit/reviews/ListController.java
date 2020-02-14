@@ -6,23 +6,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class CategoryController {
+public class ListController {
 
-    private CategoryStorage categoryStorage;
+    private ListStorage listStorage;
 
-    public CategoryController(CategoryStorage categoryStorage) {
-        this.categoryStorage = categoryStorage;
+    public ListController(ListStorage listStorage) {
+        this.listStorage = listStorage;
     }
 
     @RequestMapping("/categories")
     public String displayCategories(Model model) {
-        model.addAttribute("categories", categoryStorage.findAllCategories());
+        model.addAttribute("categories", listStorage.findAllCategories());
         return "categoriesView";
     }
 
     @RequestMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
-        Category retrievedCategory = categoryStorage.findCategoryByName(categoryName);
+        Category retrievedCategory = listStorage.findCategoryByName(categoryName);
         model.addAttribute("category", retrievedCategory);
         return "categories";
     }
