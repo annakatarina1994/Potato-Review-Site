@@ -37,5 +37,4 @@ public class Review {
     public String getReviewHashTags() {
         return reviewHashTags;
     }
-
 }

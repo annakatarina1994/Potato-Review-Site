@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CategoryStorageTest {
+
     @Test
     public void shouldStoreCategoryInMap() {
         Category testCategory = new Category("Big");

@@ -24,6 +24,5 @@ public class HttpRequestTest {
         ResponseEntity<String> response = testRestTemplate.getForEntity(
                 "http://localhost:" + port + "/categories", String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-
     }
 }
