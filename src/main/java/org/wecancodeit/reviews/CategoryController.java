@@ -2,6 +2,7 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -18,4 +19,11 @@ public class CategoryController {
         model.addAttribute("categories", categoryStorage.findAllCategories());
         return "categoriesView";
     }
+
+    @RequestMapping("/categories/{categoryName}")
+    public String displaySingleCategory(@PathVariable String categoryName, Model model) {
+        Category retrievedCategory = categoryStorage.findCategoryByName(categoryName);
+        model.addAttribute("category", retrievedCategory);
+        return "categories";
     }
+}

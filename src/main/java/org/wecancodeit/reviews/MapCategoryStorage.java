@@ -22,4 +22,9 @@ public class MapCategoryStorage implements CategoryStorage {
     public void store(Category category) {
         categories.put(category.getCategoryName(), category);
     }
+
+    @Override
+    public Category findCategoryByName(String categoryToFind) {
+        return categories.get(categoryToFind);
+    }
 }

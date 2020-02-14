@@ -6,4 +6,6 @@ public interface CategoryStorage {
     Collection<Category> findAllCategories();
 
     void store(Category category);
+
+    Category findCategoryByName(String categoryToFind);
 }
