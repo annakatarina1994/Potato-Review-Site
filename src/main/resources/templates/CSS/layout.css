@@ -63,11 +63,11 @@
     font-family: sans-serif;
 }
 
-body {
+/* body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: end;
-}
+} */
 
 .review__window {
     justify-content: center;
