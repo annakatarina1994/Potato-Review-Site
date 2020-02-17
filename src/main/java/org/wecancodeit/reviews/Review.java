@@ -1,6 +1,9 @@
 package org.wecancodeit.reviews;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 @Entity
@@ -49,6 +52,10 @@ public class Review {
 
     public Category getReviewCategory() {
         return reviewCategory;
+    }
+
+    public Long getId() {
+        return id;
     }
 
 //    public String getReviewHashTags() {
