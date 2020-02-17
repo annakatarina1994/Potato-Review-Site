@@ -41,9 +41,9 @@ public class ListControllerTest {
     }
 
     @Test
-    public void shouldReturnViewNamedCategoryViewWhenDisplaySingleCampus() {
+    public void shouldReturnViewNamedCategoryViewWhenDisplaySingleCategory() {
         String viewName = underTest.displaySingleCategory("Brown", mockModel);
-        assertThat(viewName).isEqualTo("categories");
+        assertThat(viewName).isEqualTo("category");
     }
 
     @Test
@@ -64,7 +64,7 @@ public class ListControllerTest {
         mockMvc.perform(get("/categories"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(view().name("categoriesView"))
+                .andExpect(view().name("ListOfCategories"))
                 .andExpect(model().attributeExists("categories"))
                 .andExpect(model().attribute("categories", categoryCollection));
     }
