@@ -1,0 +1,82 @@
+.mainpagelinks {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    grid-gap: 2rem;
+}
+
+.container {
+    display: grid;
+    height: 98vh;
+    width: 98vw;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 4px;
+}
+
+.title {
+    text-align: center;
+    grid-column: 1/ span 3;
+}
+
+.sidebarlinks {
+    grid-column: 1/ span 1;
+    grid-row: 2/ span 4;
+    font-size: 1rem;
+}
+
+.content {
+    display: grid;
+    grid-column: 2/ span 2;
+    grid-row: 2/ span 4;
+    justify-content: center;
+
+}
+
+
+
+
+
+/* Content Part*/
+
+
+.review {
+    opacity: 1;
+    height: auto;
+    width: 800px;
+    border: 2px solid yellow;
+    text-align: center;
+    box-shadow: 1px 1px 0px 2px lighten(#000, 0.5);
+
+}
+
+.review__image {
+    background-image: url("russetreviewbanner.jpg");
+    height: 150px;
+
+    background-size: cover;
+}
+
+.review__content {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+/* body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+} */
+
+.review__window {
+    justify-content: center;
+}
+
+.review__window h2 {
+    margin-top: 1rem;
+}
+
+p {
+    padding: 1rem;
+}

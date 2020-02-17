@@ -37,7 +37,7 @@ a {
 }
 
 .fingerlinglink{
-    font-size: 2rem;
+    font-size: 2rem; 
 }
 
 a:hover {
@@ -149,5 +149,5 @@ i {
     font-size: 2rem;
     text-align: center;
     border: 1px solid yellow;
-    background-color: rgba(246, 248, 91, 0.45);
+    background-color: rgba(246, 248, 91, 0.45);   
 }

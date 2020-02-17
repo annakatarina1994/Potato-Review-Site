@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,12 +14,12 @@
     <div class="container">
         <section class="title">
             <h1>Potato Party!</h1>
-            <h2>Subtitle</h2>
+            <h2>Fingerling Potato Reviews</h2>
         </section>
         <section class="sidebarlinks">
             <a class="homesidebar" href="index.html">Home</a><br>
-            <a class="hashtagsidebar" href="ListOfHashtags.html">Hashtags</a><br>
-            <a class="categoriessidebar" href="ListOfCategories.html">Categories</a><br>
+            <a class="hashtagsidebar" href="hashtags.html">Hashtags</a><br>
+            <a class="categoriessidebar" href="categories.html">Categories</a><br>
             <div class="sublinks">
                 <a href="yellow.html">Yellow</a><br>
                 <a href="red.html">Red</a><br>
@@ -31,19 +31,22 @@
             </div>
         </section>
         <section class="content">
-            <section class="review review1">
+            <section class="review__window">
                 <div class="review__image">
 
                 </div>
                 <div class="authur">
-                    <h2 th:text="${review.reviewAuthor}">Author, NY</h2>
-                    <h4 th:text="${review.reviewDate}">02/03/2020</h4>
-                    <h4 th:text="${review.reviewRating}"> Rating
+                    <h2>Author, NY</h2>
+                    <h4>02/03/2020</h4>
+                    <h4><i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
                     </h4>
                 </div>
                 <div class="review__content">
-                    <p th:text="${review.reviewText}"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis porro veniam provident
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro veniam provident
                         iusto temporibus cupiditate! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
                         corporis magni dolorum, quasi qui ut itaque ipsam quos quibusdam similique debitis repellat
                         quam. Incidunt optio dolorum excepturi. Nam aut veritatis fugit culpa necessitatibus architecto,
@@ -51,7 +54,7 @@
                         blanditiis temporibus quidem. Error</p>
                 </div>
                 <div class="hashtag">
-                    <p th:text="${review.reviewHashTags}">#potatoes1, #Potatoes2</p>
+                    #potatoes1, #Potatoes2
                 </div>
 
             </section>

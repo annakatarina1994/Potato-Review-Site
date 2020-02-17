@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +18,8 @@
     </section>
     <section class="sidebarlinks">
         <a class="homesidebar" href="index.html">Home</a><br>
-        <a class="hashtagsidebar" href="hashtags.html">Hashtags</a><br>
-        <a class="categoriessidebar" href="categories.html">Categories</a><br>
+        <a class="hashtagsidebar" href="ListOfHashtags.html">Hashtags</a><br>
+        <a class="categoriessidebar" href="ListOfCategories.html">Categories</a><br>
         <div class="sublinks">
             <a href="yellow.html">Yellow</a><br>
             <a href="red.html">Red</a><br>
@@ -33,9 +32,9 @@
     </section>
     <section class="content">
         <p class="potato__tags">
-            <a class="taglinks" href="spud.html">#spud</a>
-            <a class="taglinks" href="lumpy.html">#lumpy</a>
-        </p>
+        <p th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/'+ ${hashtag.hashtagName}}">hashtag</a>
+
+    </p>
     </section>
 
 
