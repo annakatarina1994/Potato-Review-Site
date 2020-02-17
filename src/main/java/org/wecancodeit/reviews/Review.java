@@ -1,20 +1,33 @@
 package org.wecancodeit.reviews;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class Review {
+    @Id
+    @GeneratedValue
+    private Long id;
     private String reviewAuthor;
     private int reviewRating;
     private Date reviewDate;
     private String reviewText;
-    private String reviewHashTags;
+    @ManyToOne
+    private Category reviewCategory;
 
-    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, String reviewHashTags) {
+
+//    @ManyToMany
+//    private Hashtag reviewHashTags;
+
+    public Review(){}
+
+    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory) {
         this.reviewAuthor = reviewAuthor;
         this.reviewRating = reviewRating;
         this.reviewDate = reviewDate;
         this.reviewText = reviewText;
-        this.reviewHashTags = reviewHashTags;
+        this.reviewCategory = reviewCategory;
+//        this.reviewHashTags = reviewHashTags;
     }
 
 
@@ -34,7 +47,11 @@ public class Review {
         return reviewText;
     }
 
-    public String getReviewHashTags() {
-        return reviewHashTags;
+    public Category getReviewCategory() {
+        return reviewCategory;
     }
+
+//    public String getReviewHashTags() {
+//        return reviewHashTags;
+//    }
 }

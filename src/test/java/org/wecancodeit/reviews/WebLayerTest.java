@@ -26,7 +26,7 @@ public class WebLayerTest {
         mockMvc.perform(get("/categories"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(view().name("categoriesView"))
+                .andExpect(view().name("ListOfCategories"))
                 .andExpect(model().attributeExists("categories"));
     }
 }

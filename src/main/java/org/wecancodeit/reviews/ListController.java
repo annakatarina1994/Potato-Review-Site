@@ -17,13 +17,13 @@ public class ListController {
     @RequestMapping("/categories")
     public String displayCategories(Model model) {
         model.addAttribute("categories", listStorage.findAllCategories());
-        return "categoriesView";
+        return "ListOfCategories";
     }
 
     @RequestMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
         Category retrievedCategory = listStorage.findCategoryByName(categoryName);
         model.addAttribute("category", retrievedCategory);
-        return "categoryView";
+        return "category";
     }
 }

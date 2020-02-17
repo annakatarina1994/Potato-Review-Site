@@ -1,9 +1,16 @@
 package org.wecancodeit.reviews;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
 
-
+@Entity
 public class Hashtag {
+
+    @Id
+    @GeneratedValue
+    private Long id;
     private String hashtagName;
 
     public Hashtag(String hashtagName) {
@@ -13,6 +20,8 @@ public class Hashtag {
     public String getHashtagName() {
         return hashtagName;
     }
+
+    public Hashtag(){}
 
     @Override
     public boolean equals(Object o) {
