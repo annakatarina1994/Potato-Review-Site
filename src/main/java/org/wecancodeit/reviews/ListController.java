@@ -24,6 +24,6 @@ public class ListController {
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
         Category retrievedCategory = listStorage.findCategoryByName(categoryName);
         model.addAttribute("category", retrievedCategory);
-        return "categories";
+        return "categoryView";
     }
 }

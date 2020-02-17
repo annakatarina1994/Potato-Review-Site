@@ -61,11 +61,11 @@ public class ListControllerTest {
 
         List<Category> categoryCollection = Collections.singletonList((testCategory));
         when(mockStorage.findAllCategories()).thenReturn(categoryCollection);
-        mockMvc.perform(get("/categories"))
+        mockMvc.perform(get("/categoriesView"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(view().name("categoryView"))
-                .andExpect(model().attributeExists("category"))
-                .andExpect(model().attribute("category", testCategory));
+                .andExpect(view().name("categoriesView"))
+                .andExpect(model().attributeExists("categoriesView"))
+                .andExpect(model().attribute("categoriesView", testCategory));
     }
 }
