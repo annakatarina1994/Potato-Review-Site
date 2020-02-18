@@ -130,6 +130,11 @@ a:hover {
     font-size: 1rem;
 }
 
+.sublinks li{
+list-style-type: none;
+padding: .3rem;
+}
+
 h4 {
     color: gray;
 }
