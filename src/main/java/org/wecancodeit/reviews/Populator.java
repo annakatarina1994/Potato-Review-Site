@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Populator implements CommandLineRunner {
     @Autowired
-    MapListStorage categoryStorage;
+    MapCategoryStorage categoryStorage;
 
-    public Populator(MapListStorage categoryStorage){
+    public Populator(MapCategoryStorage categoryStorage){
         this.categoryStorage = categoryStorage;
     }
     @Override

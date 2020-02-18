@@ -15,16 +15,16 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-public class ListControllerTest {
+public class CategoryControllerTest {
     private MockMvc mockMvc;
-    private ListController underTest;
-    private ListStorage mockStorage;
+    private CategoryController underTest;
+    private CategoryStorage mockStorage;
     private Model mockModel;
 
     @BeforeEach
     public void setUp() {
-        mockStorage = mock(ListStorage.class);
-        underTest = new ListController(mockStorage);
+        mockStorage = mock(CategoryStorage.class);
+        underTest = new CategoryController(mockStorage);
         mockMvc = MockMvcBuilders.standaloneSetup(underTest).build();
         mockModel = mock(Model.class);
     }

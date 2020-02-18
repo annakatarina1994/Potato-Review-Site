@@ -6,13 +6,13 @@ import java.util.Collection;
 import java.util.HashMap;
 
 @Service
-public class MapListStorage implements ListStorage {
+public class MapCategoryStorage implements CategoryStorage {
     private HashMap<String, Category> categories;
-    private HashMap<String, Hashtag> hashtags;
 
-    public MapListStorage() {
+
+    public MapCategoryStorage() {
         categories = new HashMap<>();
-        hashtags = new HashMap<>();
+        ;
     }
 
     @Override
@@ -20,20 +20,7 @@ public class MapListStorage implements ListStorage {
         return categories.values();
     }
 
-    @Override
-    public Collection<Hashtag> findAllHashtags() {
-        return hashtags.values();
-    }
 
-    @Override
-    public void storeHashtag(Hashtag hashtag) {
-        hashtags.put(hashtag.getHashtagName(), hashtag);
-    }
-
-    @Override
-    public Hashtag findHashtagByTag(String hashtagToFind) {
-        return hashtags.get(hashtagToFind);
-    }
 
     @Override
     public void storeCategory(Category category) {
