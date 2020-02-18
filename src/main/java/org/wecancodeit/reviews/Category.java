@@ -12,9 +12,11 @@ public class Category {
     @GeneratedValue
     private Long id;
     private String categoryName;
+    private String categoryDescription;
 
-    public Category(String categoryName) {
+    public Category(String categoryName, String categoryDescription) {
         this.categoryName = categoryName;
+        this.categoryDescription = categoryDescription;
     }
 
     public Category(){
@@ -22,6 +24,10 @@ public class Category {
 
     public String getCategoryName() {
         return categoryName;
+    }
+
+    public String getCategoryDescription(){
+        return categoryDescription;
     }
 
     @Override
