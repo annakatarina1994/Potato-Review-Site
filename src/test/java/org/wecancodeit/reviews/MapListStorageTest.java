@@ -8,7 +8,7 @@ public class MapListStorageTest {
 
     @Test
     public void shouldStoreCategoryInMap() {
-        Category testCategory = new Category("Big");
+        Category testCategory = new Category("Big", "Big ones");
         ListStorage underTest = new MapListStorage();
         underTest.storeCategory(testCategory);
         assertThat(underTest.findAllCategories()).contains(testCategory);
@@ -16,9 +16,9 @@ public class MapListStorageTest {
 
     @Test
     public void shouldRetrieveSingleCategoryByName() {
-        Category testCategory1 = new Category("Soft");
-        Category testCategory2 = new Category("Yum");
-        Category testCategory3 = new Category("Baked");
+        Category testCategory1 = new Category("Soft", "Really soft");
+        Category testCategory2 = new Category("Yum", "Tasty ones");
+        Category testCategory3 = new Category("Baked", "Not a real type");
         ListStorage underTest = new MapListStorage();
         underTest.storeCategory(testCategory1);
         underTest.storeCategory(testCategory2);

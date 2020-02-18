@@ -31,7 +31,7 @@ public class ListControllerTest {
 
     @Test
     public void shouldReturnViewWithOneCampus() {
-        Category testCategory = new Category("White");
+        Category testCategory = new Category("White", "Light colored");
         when(mockStorage.findCategoryByName("Brown")).thenReturn(testCategory);
 
         underTest.displaySingleCategory("Brown", mockModel);
@@ -48,7 +48,7 @@ public class ListControllerTest {
 
     @Test
     public void shouldGoToSpecificCategories() throws Exception {
-        Category testCategory = new Category("White");
+        Category testCategory = new Category("White", "No color");
         when(mockStorage.findCategoryByName("Brown")).thenReturn(testCategory);
 
         mockMvc.perform(get("/categories/Brown"))
@@ -57,7 +57,7 @@ public class ListControllerTest {
 
     @Test
     public void listControllerShouldInstantiate() throws Exception {
-        Category testCategory = new Category("Big");
+        Category testCategory = new Category("Big", "Larger than usual");
 
         List<Category> categoryCollection = Collections.singletonList((testCategory));
         when(mockStorage.findAllCategories()).thenReturn(categoryCollection);
