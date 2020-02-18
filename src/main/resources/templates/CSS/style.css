@@ -48,7 +48,7 @@ a:hover {
 .categories{
     text-decoration: none;
     padding: 3rem;
-    font-size: rem;
+    font-size: 3rem;
     border: 1px solid yellow;
     background-color: rgba(246, 248, 91, 0.45);
 }
@@ -56,7 +56,7 @@ a:hover {
 .hashtags{
     text-decoration: none;
     padding: 3rem;
-    font-size: rem;
+    font-size: 3rem;
     border: 1px solid yellow;
     background-color: rgba(246, 248, 91, 0.45);
 }

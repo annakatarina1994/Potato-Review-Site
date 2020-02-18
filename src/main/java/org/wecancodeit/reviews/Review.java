@@ -11,6 +11,7 @@ public class Review {
     @Id
     @GeneratedValue
     private Long id;
+    private String reviewName;
     private String reviewAuthor;
     private int reviewRating;
     private Date reviewDate;
@@ -24,15 +25,20 @@ public class Review {
 
     public Review(){}
 
-    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory) {
+    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName) {
         this.reviewAuthor = reviewAuthor;
         this.reviewRating = reviewRating;
         this.reviewDate = reviewDate;
         this.reviewText = reviewText;
         this.reviewCategory = reviewCategory;
+        this.reviewName = reviewName;
 //        this.reviewHashTags = reviewHashTags;
     }
 
+
+    public String getReviewName() {
+        return reviewName;
+    }
 
     public String getReviewAuthor() {
         return reviewAuthor;
