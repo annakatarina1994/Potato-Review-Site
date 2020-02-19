@@ -16,7 +16,9 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Populator running...");
 
-        categoryStorage.storeCategory(new Category("Russet", "this is a description"));
-        categoryStorage.storeCategory(new Category("White", "This is also a description"));
+        Category russet = new Category("Russet", "this is a description");
+        categoryStorage.storeCategory(russet);
+        Category white = new Category("White", "This is also a description");
+        categoryStorage.storeCategory(white);
        }
 }

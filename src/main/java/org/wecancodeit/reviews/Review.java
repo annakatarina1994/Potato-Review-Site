@@ -83,4 +83,9 @@ public class Review {
 //        return reviewHashTags;
 //    }
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, reviewName, reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory);
+    }
 }

@@ -13,14 +13,17 @@ public class CategoryStorageJpaImpl implements CategoryStorage {
     public CategoryStorageJpaImpl(CategoryRepository categoryRepository) {
         this.categoryRepository=categoryRepository;
     }
+
     @Override
     public Collection<Category> findAllCategories(){
         return (Collection<Category>) categoryRepository.findAll();
     }
+
     @Override
     public void storeCategory(Category category){
         categoryRepository.save(category);
     }
+    
     @Override
     public Category findCategoryByName(String categoryToFind){
         return categoryRepository.findByCategoryName(categoryToFind).get();

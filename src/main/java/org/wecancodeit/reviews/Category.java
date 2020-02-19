@@ -3,6 +3,8 @@ package org.wecancodeit.reviews;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -13,6 +15,8 @@ public class Category {
     private Long id;
     private String categoryName;
     private String categoryDescription;
+    @OneToMany(mappedBy="reviewCategory")
+    private Collection<Review> reviews;
 
     public Category(String categoryName, String categoryDescription) {
         this.categoryName = categoryName;
@@ -28,6 +32,10 @@ public class Category {
 
     public String getCategoryDescription(){
         return categoryDescription;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     @Override
