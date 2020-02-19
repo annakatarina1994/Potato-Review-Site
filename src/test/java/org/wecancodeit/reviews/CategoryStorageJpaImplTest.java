@@ -29,10 +29,10 @@ public class CategoryStorageJpaImplTest {
         underTest.storeCategory((testCategory1));
         underTest.storeCategory((testCategory2));
         Optional<Category> testCategory1Optional = Optional.of(testCategory1);
-        when(mockCatRepo.findByName("test Category1")).thenReturn(testCategory1Optional);
+        when(mockCatRepo.findByCategoryName("test Category1")).thenReturn(testCategory1Optional);
 
         Optional<Category> testCategory2Optional = Optional.of(testCategory2);
-        when(mockCatRepo.findByName("test Category2")).thenReturn(testCategory2Optional);
+        when(mockCatRepo.findByCategoryName("test Category2")).thenReturn(testCategory2Optional);
 
 Category retrievedCategory1 =underTest.findCategoryByName("test Category1");
         Category retrievedCategory2 =underTest.findCategoryByName("test Category2");

@@ -1,7 +1,10 @@
 package org.wecancodeit.reviews;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.Collection;
 
+@Repository
 public interface CategoryStorage {
     Collection<Category> findAllCategories();
 
