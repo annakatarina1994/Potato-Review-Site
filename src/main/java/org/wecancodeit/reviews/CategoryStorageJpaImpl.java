@@ -23,7 +23,7 @@ public class CategoryStorageJpaImpl implements CategoryStorage {
     public void storeCategory(Category category){
         categoryRepository.save(category);
     }
-    
+
     @Override
     public Category findCategoryByName(String categoryToFind){
         return categoryRepository.findByCategoryName(categoryToFind).get();
