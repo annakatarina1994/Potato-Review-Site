@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 public class Review {
@@ -23,7 +24,8 @@ public class Review {
 //    @ManyToMany
 //    private Hashtag reviewHashTags;
 
-    public Review(){}
+    public Review() {
+    }
 
     public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName) {
         this.reviewAuthor = reviewAuthor;
@@ -64,7 +66,21 @@ public class Review {
         return id;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Review review = (Review) o;
+        return Objects.equals(reviewName, review.reviewName) &&
+                Objects.equals(reviewCategory, review.reviewCategory) &&
+                Objects.equals(reviewAuthor, review.reviewAuthor) &&
+                Objects.equals(reviewDate, review.reviewDate) &&
+                Objects.equals(reviewRating, review.reviewRating) &&
+                Objects.equals(reviewText, review.reviewText) &&
+                Objects.equals(id, review.id);
+
 //    public String getReviewHashTags() {
 //        return reviewHashTags;
 //    }
+    }
 }

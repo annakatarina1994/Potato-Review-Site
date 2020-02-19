@@ -11,6 +11,7 @@ public class Populator implements CommandLineRunner {
     public Populator(CategoryStorage categoryStorage){
         this.categoryStorage = categoryStorage;
     }
+
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Populator running...");
