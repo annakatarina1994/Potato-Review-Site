@@ -5,13 +5,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Collection;
+
 @Controller
 public class CategoryController {
 
     private CategoryStorage categoryStorage;
-
-    public CategoryController(CategoryStorage categoryStorage) {
+    private ReviewStorage reviewStorage;
+    public CategoryController(CategoryStorage categoryStorage,ReviewStorage reviewStorage) {
         this.categoryStorage = categoryStorage;
+        this.reviewStorage= reviewStorage;
     }
 
     @RequestMapping("/categories")
@@ -23,7 +26,9 @@ public class CategoryController {
     @RequestMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
         Category retrievedCategory = categoryStorage.findCategoryByName(categoryName);
+        Collection<Review> reviewList = reviewStorage.findAllReviews();
         model.addAttribute("category", retrievedCategory);
+        model.addAttribute("reviews", reviewList);
         return "category";
     }
 }
