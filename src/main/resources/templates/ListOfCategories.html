@@ -34,13 +34,11 @@
     <section class="content">
 
         <p class="potato__categories">
-            <a href="russet.html" class="russetlink">Russet Potatoes</a> - this is a kind of potato</br>
-            <a href="fingerling.html" class="fingerlinglink">Fingerling Potatoes</a> - this is a different kind</br>
-            <!-- Red potatoes - also a type</br>
-            White potatoes - is this a type?</br>
-            Yellow potatoes</br>
-            Purple potatoes </br>
-            Petite potatoes </br> -->
+            <h2 th:each="category:${categories}"><a th:href="@{'/categories/' + ${category.categoryName}}"
+                                                    th:text="${category.categoryName}">Category</a>
+                                                    <span th:text="${category.categoryDescription}"></span>
+
+        </h2>
         </p>
     </section>
 </div>
