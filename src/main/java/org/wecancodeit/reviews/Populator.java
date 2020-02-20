@@ -8,6 +8,7 @@ public class Populator implements CommandLineRunner {
 
     CategoryStorage categoryStorage;
 
+
     public Populator(CategoryStorage categoryStorage){
         this.categoryStorage = categoryStorage;
     }

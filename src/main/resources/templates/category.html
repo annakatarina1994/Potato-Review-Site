@@ -14,7 +14,7 @@
 <div class="container">
     <section class="title">
         <h1>Potato Party!</h1>
-        <h2>Potato Categories</h2>
+        <h2 th:text="${category.categoryName}">Category Name</h2>
 
     </section>
     <section class="sidebarlinks">
@@ -33,7 +33,12 @@
     </section>
     <section class="content">
         <p class="potato__tags">
-        <p th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/'+ ${hashtag.location}}">hashtag</a>
+        <ul class="">
+            <li class="review_list_link" th:each="review:${category.reviews}">
+                <a class="review-list-links__link" th:href="@{'/reviews/'+ ${review.id}}"
+                   th:text="${review.reviewName}">Refactoring</a>
+            </li>
+        </ul>
         </p>
     </section>
 
