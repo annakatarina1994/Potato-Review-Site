@@ -21,8 +21,8 @@ public class ReviewController {
     }
 
     @RequestMapping("/reviews/{reviewName}")
-    public String displaySingleReview(@PathVariable String reviewName, Model model) {
-        Review retrievedReview = reviewStorage.findReviewByName(reviewName);
+    public String displaySingleReview(@PathVariable String reviewId, Model model) {
+        Review retrievedReview = reviewStorage.findReviewById(reviewId);
         model.addAttribute("review", retrievedReview);
         return "review";
     }

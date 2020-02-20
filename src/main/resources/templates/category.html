@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet"/>
-    <title>Categories</title>
+    <title th:text="${category.categoryName}">Categories</title>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/layout.css"/>
 </head>
@@ -36,7 +36,7 @@
         <ul class="">
             <li class="review_list_link" th:each="review:${category.reviews}">
                 <a class="review-list-links__link" th:href="@{'/reviews/'+ ${review.id}}"
-                   th:text="${review.reviewName}">Refactoring</a>
+                   th:text="${review.reviewName}"></a>
             </li>
         </ul>
         </p>
