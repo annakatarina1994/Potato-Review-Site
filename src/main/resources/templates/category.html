@@ -33,8 +33,8 @@
     </section>
     <section class="content">
         <p class="potato__tags">
-        <ul class="">
-            <li class="review_list_link" th:each="review:${reviews}">
+        <ul >
+            <li class="review_list_link" th:each="review:${reviews}" th:if="${category.categoryName.equals(review.getReviewCategory().categoryName)}">
                 <a class="review-list-links__link" th:href="@{'/reviews/'+ ${review.id}}"
                    th:text="${review.reviewName}"></a>
             </li>
