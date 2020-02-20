@@ -38,5 +38,7 @@ public class Populator implements CommandLineRunner {
         reviewStorage.storeReview(firstReview);
         Review secondReview = new Review("John", 5, new Date(), "This was a good potato", yellow, "yellow");
         reviewStorage.storeReview(secondReview);
+        Review thirdReview = new Review("John", 5, new Date(), "This was a good potato", russet, "russet");
+        reviewStorage.storeReview(thirdReview);
        }
 }
