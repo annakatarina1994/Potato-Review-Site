@@ -33,13 +33,13 @@
     </section>
     <section class="content">
 
-        <p class="potato__categories">
-            <h2 th:each="category:${categories}"><a th:href="@{'/categories/' + ${category.categoryName}}"
+        <div class="potato__categories">
+            <p th:each="category:${categories}"><a th:href="@{'/categories/' + ${category.categoryName}}"
                                                     th:text="${category.categoryName}">Category</a>
                                                     <span th:text="${category.categoryDescription}"></span>
 
-        </h2>
         </p>
+        </div>
     </section>
 </div>
 </body>

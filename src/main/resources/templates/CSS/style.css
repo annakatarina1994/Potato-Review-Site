@@ -88,8 +88,12 @@ a:hover {
 .potato__categories{
     padding:10px;
     margin-left: 36px;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: sans-serif;
+}
+
+.potato__categories span{
+    font-size: 1rem;
 }
 
 .cat{
