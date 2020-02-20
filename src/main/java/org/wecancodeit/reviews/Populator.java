@@ -3,14 +3,18 @@ package org.wecancodeit.reviews;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 @Component
 public class Populator implements CommandLineRunner {
 
     CategoryStorage categoryStorage;
+    ReviewStorage reviewStorage;
 
 
-    public Populator(CategoryStorage categoryStorage){
+    public Populator(CategoryStorage categoryStorage, ReviewStorage reviewStorage){
         this.categoryStorage = categoryStorage;
+        this.reviewStorage = reviewStorage;
     }
 
     @Override
@@ -29,5 +33,8 @@ public class Populator implements CommandLineRunner {
         categoryStorage.storeCategory(yellow);
         Category fingerling = new Category("Fingerling", "A small finger shaped potato that grows small and narrow");
         categoryStorage.storeCategory(fingerling);
+
+        Review firstReview = new Review("Brad", 4, new Date(), "This was a good potato", russet, "Really good potato");
+        reviewStorage.storeReview(firstReview);
        }
 }
