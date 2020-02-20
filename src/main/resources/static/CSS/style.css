@@ -94,6 +94,7 @@ a:hover {
 
 .potato__categories a{
     font-size: 2rem;
+    margin-right: 2rem;
 }
 
 .potato__categories span{
