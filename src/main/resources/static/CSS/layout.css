@@ -1,3 +1,11 @@
+.mainpagelinks {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    grid-gap: 2rem;
+}
+
 .container {
     display: grid;
     height: 98vh;
@@ -7,61 +15,46 @@
     grid-gap: 4px;
 }
 
-.heading{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.mainpagelinks {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 3rem;
-    grid-gap: 2rem;
-}
-
-.title{
+.title {
     text-align: center;
     grid-column: 1/ span 3;
 }
 
-.sidebarlinks{
+.sidebarlinks {
     grid-column: 1/ span 1;
     grid-row: 2/ span 4;
-    font-size: 3rem;
+    font-size: 1rem;
 }
 
-.content{
+.content {
+    display: grid;
     grid-column: 2/ span 2;
     grid-row: 2/ span 4;
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    text-align: center;
+    justify-content: center;
+
 }
 
-.sublinks{
-    display: grid;
-    grid-row-gap: .05rem;
-}
+
+
+
 
 /* Content Part*/
 
-.review__window {
-    justify-content: center;
+
+.review {
     opacity: 1;
     height: auto;
-    width: auto;
+    width: 800px;
     border: 2px solid yellow;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    text-align: center;
     box-shadow: 1px 1px 0px 2px lighten(#000, 0.5);
+
 }
 
 .review__image {
     background-image: url("russetreviewbanner.jpg");
-    height: 6rem;
+    height: 150px;
+
     background-size: cover;
 }
 
@@ -70,19 +63,15 @@
     font-family: sans-serif;
 }
 
-h4 {
-    color: gray;
-}
-
-i {
-    color: blue;
-}
-
 /* body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: end;
 } */
+
+.review__window {
+    justify-content: center;
+}
 
 .review__window h2 {
     margin-top: 1rem;
@@ -90,20 +79,4 @@ i {
 
 p {
     padding: 1rem;
-}
-
-.potato__categories{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.review__links{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.potato__tags{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    text-align: center;
 }

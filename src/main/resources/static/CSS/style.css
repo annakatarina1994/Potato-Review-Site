@@ -37,7 +37,7 @@ a {
 }
 
 .fingerlinglink{
-    font-size: 2rem; 
+    font-size: 2rem;
 }
 
 a:hover {
@@ -48,7 +48,7 @@ a:hover {
 .categories{
     text-decoration: none;
     padding: 3rem;
-    font-size: rem;
+    font-size: 3rem;
     border: 1px solid yellow;
     background-color: rgba(246, 248, 91, 0.45);
 }
@@ -56,7 +56,7 @@ a:hover {
 .hashtags{
     text-decoration: none;
     padding: 3rem;
-    font-size: rem;
+    font-size: 3rem;
     border: 1px solid yellow;
     background-color: rgba(246, 248, 91, 0.45);
 }
@@ -88,8 +88,16 @@ a:hover {
 .potato__categories{
     padding:10px;
     margin-left: 36px;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: sans-serif;
+}
+
+.potato__categories a{
+    font-size: 2rem;
+}
+
+.potato__categories span{
+    font-size: 1rem;
 }
 
 .cat{
@@ -130,6 +138,11 @@ a:hover {
     font-size: 1rem;
 }
 
+.sublinks li{
+list-style-type: none;
+padding: .3rem;
+}
+
 h4 {
     color: gray;
 }
@@ -149,5 +162,5 @@ i {
     font-size: 2rem;
     text-align: center;
     border: 1px solid yellow;
-    background-color: rgba(246, 248, 91, 0.45);   
+    background-color: rgba(246, 248, 91, 0.45);
 }
