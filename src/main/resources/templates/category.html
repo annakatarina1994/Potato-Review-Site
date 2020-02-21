@@ -34,7 +34,7 @@
     <section class="content">
         <p class="potato__tags">
         <ul >
-            <li class="review_list_link" th:each="review:${reviews}">
+            <li class="review_list_link" th:each="review:${category.getReviews()}">
                 <a class="review-list-links__link" th:href="@{'/review/'+ ${review.id}}"
                    th:text="${review.reviewName}"></a>
             </li>

@@ -3,6 +3,8 @@ package org.wecancodeit.reviews;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
 @Component
@@ -10,11 +12,13 @@ public class Populator implements CommandLineRunner {
 
     CategoryStorage categoryStorage;
     ReviewStorage reviewStorage;
+    HashtagStorage hashtagStorage;
 
 
-    public Populator(CategoryStorage categoryStorage, ReviewStorage reviewStorage){
+    public Populator(CategoryStorage categoryStorage, ReviewStorage reviewStorage, HashtagStorage hashtagStorage){
         this.categoryStorage = categoryStorage;
         this.reviewStorage = reviewStorage;
+        this.hashtagStorage = hashtagStorage;
     }
 
     @Override
@@ -33,8 +37,14 @@ public class Populator implements CommandLineRunner {
         categoryStorage.storeCategory(yellow);
         Category fingerling = new Category("Fingerling", "A small finger shaped potato that grows small and narrow");
         categoryStorage.storeCategory(fingerling);
+        Hashtag hashtag1 = new Hashtag("Tasty Tator");
+         hashtagStorage.storeHashtag(hashtag1);
+        Hashtag hashtag2 = new Hashtag("Lumpy");
+        hashtagStorage.storeHashtag(hashtag2);
 
-        Review firstReview = new Review("Brad", 4, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it", russet, "Really good potato",#);
+
+
+        Review firstReview = new Review("Brad", 4, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it", russet, "Really good potato");
         reviewStorage.storeReview(firstReview);
         Review secondReview = new Review("John", 5, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled ", yellow, "yellow");
         reviewStorage.storeReview(secondReview);

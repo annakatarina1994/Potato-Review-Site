@@ -15,12 +15,19 @@ public class Category {
     private Long id;
     private String categoryName;
     private String categoryDescription;
+
+
+    public Collection<Review> getReviews() {
+        return reviews;
+    }
+
     @OneToMany(mappedBy="reviewCategory")
     private Collection<Review> reviews;
 
     public Category(String categoryName, String categoryDescription) {
         this.categoryName = categoryName;
         this.categoryDescription = categoryDescription;
+
     }
 
     public Category(){

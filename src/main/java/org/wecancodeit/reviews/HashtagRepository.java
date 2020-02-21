@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Repository
+
 public interface HashtagRepository extends CrudRepository<Hashtag, Long> {
 
-    Optional<Hashtag> findByHashtahId(Long idToFind);
+    Optional<Hashtag> findById(Long idToFind);
 }

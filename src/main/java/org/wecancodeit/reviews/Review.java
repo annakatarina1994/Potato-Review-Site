@@ -1,9 +1,9 @@
 package org.wecancodeit.reviews;
 
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 public class Review {
@@ -19,21 +19,21 @@ public class Review {
     private Category reviewCategory;
 
 
-
     @ManyToMany
-    private Collection<Hashtag> reviewHashTags;
+    private Collection<Hashtag> reviewHashTags = new ArrayList<>();
+
 
     public Review() {
     }
 
-    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName, Collection<Hashtag> reviewHashTags) {
+    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName) {
         this.reviewAuthor = reviewAuthor;
         this.reviewRating = reviewRating;
         this.reviewDate = reviewDate;
         this.reviewText = reviewText;
         this.reviewCategory = reviewCategory;
         this.reviewName = reviewName;
-        this.reviewHashTags = reviewHashTags;
+        this.reviewHashTags = getReviewHashTags();
     }
 
     public Collection<Hashtag> getReviewHashTags() {
@@ -67,6 +67,8 @@ public class Review {
         return id;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -80,13 +82,11 @@ public class Review {
                 Objects.equals(reviewText, review.reviewText) &&
                 Objects.equals(id, review.id);
 
-//    public String getReviewHashTags() {
-//        return reviewHashTags;
-//    }
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, reviewName, reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory);
+        return Objects.hash(id, reviewName, reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory,reviewHashTags);
     }
 }

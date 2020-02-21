@@ -30,9 +30,9 @@ public class CategoryController {
     @RequestMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
         Category retrievedCategory = categoryStorage.findCategoryByName(categoryName);
-        Collection<Review> reviewList = reviewStorage.findAllReviews();
+      //  Collection<Review> reviewList = reviewStorage.findAllReviews();
         model.addAttribute("category", retrievedCategory);
-        model.addAttribute("reviews", reviewList);
+      //  model.addAttribute("reviews", reviewList);
         return "category";
     }
 }

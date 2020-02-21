@@ -13,11 +13,15 @@ public class Hashtag {
     private Long id;
     private String hashtagName;
 
+
+
     public Hashtag(String hashtagName) {
+
         this.hashtagName = hashtagName;
     }
 
     public String getHashtagName() {
+
         return hashtagName;
     }
 

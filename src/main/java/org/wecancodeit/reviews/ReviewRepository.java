@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface ReviewRepository extends CrudRepository<Review, Long> {
-Optional<Review> findByReviewName(String reviewToFind);
+Optional<Review> findById(Long reviewToFind);
 
 }
