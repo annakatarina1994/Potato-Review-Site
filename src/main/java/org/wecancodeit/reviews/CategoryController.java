@@ -1,5 +1,7 @@
 package org.wecancodeit.reviews;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +13,9 @@ import java.util.Collection;
 public class CategoryController {
 
     private CategoryStorage categoryStorage;
+
     private ReviewStorage reviewStorage;
+
     public CategoryController(CategoryStorage categoryStorage,ReviewStorage reviewStorage) {
         this.categoryStorage = categoryStorage;
         this.reviewStorage= reviewStorage;

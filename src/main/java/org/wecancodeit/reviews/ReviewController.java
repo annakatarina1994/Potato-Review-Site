@@ -20,8 +20,8 @@ public class ReviewController {
         return "ListOfReviews";
     }
 
-    @RequestMapping("/reviews/{reviewName}")
-    public String displaySingleReview(@PathVariable String reviewId, Model model) {
+    @RequestMapping("/review/{reviewId}")
+    public String displaySingleReview(@PathVariable Long reviewId, Model model) {
         Review retrievedReview = reviewStorage.findReviewById(reviewId);
         model.addAttribute("review", retrievedReview);
         return "review";

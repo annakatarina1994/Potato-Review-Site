@@ -10,6 +10,6 @@ public interface ReviewStorage {
 
     void storeReview(Review review);
 
-    Review findReviewById(String reviewToFind);
+    Review findReviewById(Long reviewToFind);
 
 }

@@ -25,7 +25,7 @@ public class ReviewStorageJpaImpl implements ReviewStorage {
     }
 
     @Override
-    public Review findReviewById(String reviewToFind){
-        return reviewRepository.findByReviewName(reviewToFind).get();
+    public Review findReviewById(Long reviewToFind){
+        return reviewRepository.findById(reviewToFind).get();
     }
 }

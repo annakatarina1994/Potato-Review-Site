@@ -35,7 +35,7 @@
         <p class="potato__tags">
         <ul >
             <li class="review_list_link" th:each="review:${reviews}" th:if="${category.categoryName.equals(review.getReviewCategory().categoryName)}">
-                <a class="review-list-links__link" th:href="@{'/reviews/'+ ${review.id}}"
+                <a class="review-list-links__link" th:href="@{'/review/'+ ${review.id}}"
                    th:text="${review.reviewName}"></a>
             </li>
         </ul>
