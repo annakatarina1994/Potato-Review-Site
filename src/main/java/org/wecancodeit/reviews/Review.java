@@ -1,9 +1,7 @@
 package org.wecancodeit.reviews;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Objects;
 
@@ -21,23 +19,26 @@ public class Review {
     private Category reviewCategory;
 
 
-//    @ManyToMany
-//    private Hashtag reviewHashTags;
+
+    @ManyToMany
+    private Collection<Hashtag> reviewHashTags;
 
     public Review() {
     }
 
-    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName) {
+    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName, Collection<Hashtag> reviewHashTags) {
         this.reviewAuthor = reviewAuthor;
         this.reviewRating = reviewRating;
         this.reviewDate = reviewDate;
         this.reviewText = reviewText;
         this.reviewCategory = reviewCategory;
         this.reviewName = reviewName;
-//        this.reviewHashTags = reviewHashTags;
+        this.reviewHashTags = reviewHashTags;
     }
 
-
+    public Collection<Hashtag> getReviewHashTags() {
+        return reviewHashTags;
+    }
     public String getReviewName() {
         return reviewName;
     }
