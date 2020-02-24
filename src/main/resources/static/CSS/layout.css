@@ -11,7 +11,7 @@
     height: 98vh;
     width: 98vw;
     grid-template-columns: 15% 1fr;
-    grid-template-rows: 25% 75%
+    grid-template-rows: 25% 75%;
     grid-gap: 4px;
 }
 
