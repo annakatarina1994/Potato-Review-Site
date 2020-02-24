@@ -1,7 +1,6 @@
 package org.wecancodeit.reviews;
 
 import org.junit.jupiter.api.Test;
-import org.wecancodeit.reviews.Models.Category;
 
 import java.util.Collections;
 import java.util.Optional;

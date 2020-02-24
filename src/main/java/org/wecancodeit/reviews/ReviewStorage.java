@@ -1,7 +1,6 @@
 package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Repository;
-import org.wecancodeit.reviews.Models.Review;
 
 import java.util.Collection;
 

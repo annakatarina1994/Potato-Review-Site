@@ -2,9 +2,6 @@ package org.wecancodeit.reviews;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.wecancodeit.reviews.Models.Category;
-import org.wecancodeit.reviews.Models.Hashtag;
-import org.wecancodeit.reviews.Models.Review;
 
 import java.util.Date;
 
