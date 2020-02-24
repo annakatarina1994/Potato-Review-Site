@@ -45,7 +45,7 @@
     opacity: 1;
     height: auto;
     width: 800px;
-    border: 2px solid yellow;
+      border: 2px solid yellow;
     text-align: center;
     box-shadow: 1px 1px 0px 2px lighten(#000, 0.5);
 
