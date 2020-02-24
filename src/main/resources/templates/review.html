@@ -21,13 +21,8 @@
             <a class="hashtagsidebar" href="ListOfHashtags.html">Hashtags</a><br>
             <a class="categoriessidebar" href="ListOfCategories.html">Categories</a><br>
             <ul class="sublinks">
-                <li><a href="yellow.html">Yellow</a></li>
-                <li><a href="red.html">Red</a></li>
-                <li><a href="white.html">White</a></li>
-                <li><a href="blue.html">Blue</a></li>
-                <li><a href="russet.html">Russet</a></li>
-                <li><a href="fingerling.html">Fingerling</a></li>
-                <li><a href="petite.html">Petite</a></li>
+                <li th:each="category:${categories}"><a th:href="@{'/categories/' + ${category.categoryName}}"
+                                                        th:text="${category.categoryName}">Category</a>git add
             </ul>
         </section>
         <section class="content">
