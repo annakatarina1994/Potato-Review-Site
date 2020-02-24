@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet"/>
+    <title>Review Submission</title>
+    <link rel="stylesheet" href="./css/styles.css" th:href="@{/css/style.css}" type="text/css"/>
+    <link rel="stylesheet" href="./css/layout.css" th:href="@{/css/layout.css}" type="text/css"/>
+</head>
+
+<body>
+<div class="container">
+    <section class="title">
+        <h1>Potato Party!</h1>
+        <h2>Write a Review!</h2>
+
+    </section>
+    <section class="sidebarlinks">
+        <a class="homesidebar" href="/static/index.html">Home</a><br>
+        <a class="hashtagsidebar" href="/hashtags">Hashtags</a><br>
+        <a class="categoriessidebar" href="/categories">Categories</a><br>
+        <ul class="sublinks">
+            <li><a href="/categories/Russet">Russet</a></li>
+            <li><a href="/categories/Yellow">Yellow</a></li>
+            <li><a href="/categories/White">White</a></li>
+            <li><a href="/categories/Blue">Blue</a></li>
+            <li><a href="/categories/Fingerling">Fingerling</a></li>
+            <li><a href="/categories/Red">Red</a></li>
+        </ul>
+    </section>
+    <section class="content">
+        <div class="review__form">
+        <form action="add-review" method="POST">
+            <label>Category</label>
+            <select id="categoryName">
+                <option value="Russet">Russet</option>
+                <option value="White">White</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Fingerling">Fingerling</option>
+            </select>
+            <label>Review Title</label>
+            <input name="reviewName" type="text">
+            <label>Author</label>
+            <input name="reviewAuthor" type="text">
+            <label>Potato Rating</label>
+            <select id="reviewRating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label>Potato Review</label>
+            <textarea name="reviewText"></textarea>
+            <button type="Submit">Post Review!</button>
+        </form>
+        </div>
+
+    </section>
+
+
+</div>
+</body>
+
+</html>
