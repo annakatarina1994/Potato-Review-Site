@@ -19,11 +19,15 @@
     </section>
     <section class="sidebarlinks">
         <a class="homesidebar" href="index.html">Home</a><br>
-        <a class="hashtagsidebar" href="hashtags.html">Hashtags</a><br>
-        <a class="categoriessidebar" href="categories.html">Categories</a><br>
+        <a class="hashtagsidebar" href="/hashtags">Hashtags</a><br>
+        <a class="categoriessidebar" href="/categories">Categories</a><br>
         <ul class="sublinks">
-            <li th:each="category:${categories}"><a th:href="@{'/categories/' + ${category.categoryName}}"
-                                                    th:text="${category.categoryName}">Category</a>
+            <li><a href="/categories/Russet">Russet</a></li>
+            <li><a href="/categories/Yellow">Yellow</a></li>
+            <li><a href="/categories/White">White</a></li>
+            <li><a href="/categories/Blue">Blue</a></li>
+            <li><a href="/categories/Fingerling">Fingerling</a></li>
+            <li><a href="/categories/Red">Red</a></li>
         </ul>
     </section>
     <section class="content">
