@@ -6,6 +6,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
 import org.wecancodeit.reviews.Controllers.CategoryController;
+import org.wecancodeit.reviews.Models.Category;
 
 import java.util.Collections;
 import java.util.List;

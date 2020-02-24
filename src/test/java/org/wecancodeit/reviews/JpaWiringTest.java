@@ -4,6 +4,8 @@ package org.wecancodeit.reviews;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.wecancodeit.reviews.Models.Category;
+import org.wecancodeit.reviews.Models.Review;
 
 import java.util.Date;
 

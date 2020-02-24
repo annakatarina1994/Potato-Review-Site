@@ -1,6 +1,7 @@
 package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.Models.Hashtag;
 
 import java.util.Collection;
 

@@ -1,6 +1,4 @@
-package org.wecancodeit.reviews;
-
-import org.springframework.context.annotation.Bean;
+package org.wecancodeit.reviews.Models;
 
 import javax.persistence.*;
 import java.util.*;
