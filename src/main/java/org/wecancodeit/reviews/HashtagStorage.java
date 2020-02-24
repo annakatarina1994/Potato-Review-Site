@@ -3,7 +3,7 @@ package org.wecancodeit.reviews;
 import org.springframework.stereotype.Controller;
 
 import java.util.Collection;
-@Controller
+
 public interface HashtagStorage {
     Collection<Hashtag> findAllHashtags();
 
