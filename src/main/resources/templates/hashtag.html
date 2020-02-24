@@ -28,7 +28,7 @@
     </section>
     <section class="content">
         <p class="potato__tags">
-        <p th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/'+ ${hashtag.location}}">hashtag</a>
+        <p th:each="hashtag:${hashtag}"><a th:href="@{'/hashtag/'+ ${hashtag.id}}">hashtag</a>
         </p>
     </section>
 

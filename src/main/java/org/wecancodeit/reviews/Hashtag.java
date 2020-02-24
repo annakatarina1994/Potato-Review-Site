@@ -8,11 +8,15 @@ import java.util.Objects;
 @Entity
 public class Hashtag {
 
+
     @Id
     @GeneratedValue
     private Long id;
     private String hashtagName;
 
+    public Long getId() {
+        return id;
+    }
 
 
     public Hashtag(String hashtagName) {
