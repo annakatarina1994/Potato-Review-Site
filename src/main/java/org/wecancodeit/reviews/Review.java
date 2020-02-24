@@ -27,7 +27,7 @@ public class Review {
     public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName) {
         this.reviewAuthor = reviewAuthor;
         this.reviewRating = reviewRating;
-        this.reviewDate = reviewDate;
+        this.reviewDate = new Date();
         this.reviewText = reviewText;
         this.reviewCategory = reviewCategory;
         this.reviewName = reviewName;
