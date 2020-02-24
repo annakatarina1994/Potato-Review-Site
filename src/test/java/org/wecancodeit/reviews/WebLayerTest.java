@@ -19,7 +19,11 @@ public class WebLayerTest {
     @Autowired
     private MockMvc mockMvc;
     @MockBean
-    CategoryStorage mockStorage;
+    CategoryStorage categoryStorage;
+    @MockBean
+    ReviewStorage reviewStorage;
+    @MockBean
+    HashtagStorage hashtagStorage;
 
     @Test
     public void categoriesShouldBeOkAndReturnTheViewWithModelAttribute() throws Exception {
