@@ -58,5 +58,11 @@ public class Populator implements CommandLineRunner {
         reviewStorage.storeReview(seventhReview);
         Review eighthReview = new Review("Bimmy", 3, new Date(), "I didn't like it, too bitter. However, my neighbor choked on one, and he's a jerk. High Five! ", red, "meh");
         reviewStorage.storeReview(eighthReview);
+        Review ninthReview = new Review("MaryBeth", 1, new Date(), "Had these on the side of fermented fish. These potatoes made me feel very ill, would not recommend ", white, "made me sick");
+        reviewStorage.storeReview(ninthReview);
+        Review tenthReview = new Review("Sam", 5, new Date(), "I love all potatoes, my favorite food. Boil 'em, mash 'em, stick 'em in a stew", white, "lovely");
+        reviewStorage.storeReview(tenthReview);
+        Review eleventhReview = new Review("Sam", 5, new Date(), "I love all potatoes, my favorite food. Boil 'em, mash 'em, stick 'em in a stew", white, "lovely");
+        reviewStorage.storeReview(tenthReview);
        }
 }
