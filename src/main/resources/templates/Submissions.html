@@ -50,12 +50,10 @@
                     <textarea name="reviewText"></textarea>
                     <label>Category</label>
                     <select id="reviewCategory" name="reviewCategory">
-                        <option value="russet">Russet</option>
-                        <option value="white">White</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="red">Red</option>
-                        <option value="blue">Blue</option>
-                        <option value="fingerling">Fingerling</option>
+                        <option th:each="category:${categories}" th:value="${category.categoryName}" th:text="${category.categoryName}">
+
+                        </option>
+
                     </select>
                     <label>Review Title</label>
                     <input name="reviewName" type="text">

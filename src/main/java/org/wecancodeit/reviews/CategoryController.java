@@ -23,6 +23,12 @@ public class CategoryController {
         return "ListOfCategories";
     }
 
+    @RequestMapping("/submissions")
+    public String displaySubmissions(Model model) {
+        model.addAttribute("categories", categoryStorage.findAllCategories());
+        return "Submissions";
+    }
+
     @RequestMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
         Category retrievedCategory = categoryStorage.findCategoryByName(categoryName);
