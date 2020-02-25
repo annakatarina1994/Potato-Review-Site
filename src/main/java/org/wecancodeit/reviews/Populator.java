@@ -42,9 +42,9 @@ public class Populator implements CommandLineRunner {
 
 
 
-        Review firstReview = new Review("Brad", 4, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it", russet, "Really good potato");
+        Review firstReview = new Review("Brad", 4, new Date(), "Very versatile potato. This is the only thing I've eaten for the past month. I had to take off a point because I'm getting sick of them", russet, "A tater for every occasion ");
         reviewStorage.storeReview(firstReview);
-        Review secondReview = new Review("John", 5, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled ", yellow, "yellow");
+        Review secondReview = new Review("Wilbur", 5, new Date(), "I loved it. I mashed them all up and ate them with a side of whiskey. Great flavor! ", yellow, "Excellent");
         reviewStorage.storeReview(secondReview);
         Review thirdReview = new Review("John", 5, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ", russet, "russet");
         reviewStorage.storeReview(thirdReview);
