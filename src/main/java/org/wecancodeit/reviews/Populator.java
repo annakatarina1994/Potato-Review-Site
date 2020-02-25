@@ -46,7 +46,7 @@ public class Populator implements CommandLineRunner {
         reviewStorage.storeReview(firstReview);
         Review secondReview = new Review("Wilbur", 5, new Date(), "I loved it. I mashed them all up and ate them with a side of whiskey. Great flavor! ", yellow, "Excellent");
         reviewStorage.storeReview(secondReview);
-        Review thirdReview = new Review("John", 5, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ", russet, "russet");
+        Review thirdReview = new Review("Big Hungry Joe", 5, new Date(), " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ", russet, "russet");
         reviewStorage.storeReview(thirdReview);
        }
 }
