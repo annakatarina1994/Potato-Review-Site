@@ -18,7 +18,7 @@ public class JpaWiringTest {
 @Test
 public void categoryShouldHaveListOfReviews(){
     Category testCategory = new Category("Test Category", "Description");
-    Review testReview = new Review("Test Author", 2, new Date(), "review text", testCategory,"Good" );
+    Review testReview = new Review("Test Author", 2, "review text", testCategory,"Good" );
 
     categoryRepo.save(testCategory);
     reviewRepo.save(testReview);

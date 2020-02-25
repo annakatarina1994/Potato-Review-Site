@@ -10,7 +10,7 @@ public class Review {
     private Long id;
     private String reviewName;
     private String reviewAuthor;
-    private int reviewRating;
+    private Integer reviewRating;
     private Date reviewDate;
     private String reviewText;
     @ManyToOne
@@ -24,7 +24,7 @@ public class Review {
     public Review() {
     }
 
-    public Review(String reviewAuthor, int reviewRating, Date reviewDate, String reviewText, Category reviewCategory, String reviewName) {
+    public Review(String reviewAuthor, Integer reviewRating, String reviewText, Category reviewCategory, String reviewName) {
         this.reviewAuthor = reviewAuthor;
         this.reviewRating = reviewRating;
         this.reviewDate = new Date();
@@ -45,7 +45,7 @@ public class Review {
         return reviewAuthor;
     }
 
-    public int getReviewRating() {
+    public Integer getReviewRating() {
         return reviewRating;
     }
 
@@ -85,6 +85,6 @@ public class Review {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, reviewName, reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory,reviewHashTags);
+        return Objects.hash(reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory, reviewName, id, reviewHashTags);
     }
 }

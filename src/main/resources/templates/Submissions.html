@@ -40,7 +40,7 @@
                     <input name="reviewAuthor" type="text">
 
                     <label>Potato Rating</label>
-                    <select id="reviewRating">
+                    <select name="reviewRating">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -50,7 +50,7 @@
                     <label>Potato Review</label>
                     <textarea name="reviewText"></textarea>
                     <label>Category</label>
-                    <select id="reviewCategory" name="reviewCategory">
+                    <select id="reviewCategory" name="categoryName">
                         <option th:each="category:${categories}" th:value="${category.categoryName}" th:text="${category.categoryName}">
 
                         </option>

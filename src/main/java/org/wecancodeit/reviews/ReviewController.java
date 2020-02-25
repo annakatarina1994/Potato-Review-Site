@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Date;
-
 @Controller
 public class ReviewController {
 
     private ReviewStorage reviewStorage;
+    private CategoryStorage categoryStorage;
 
-    public ReviewController(ReviewStorage reviewStorage) {
+    public ReviewController(ReviewStorage reviewStorage, CategoryStorage categoryStorage) {
         this.reviewStorage = reviewStorage;
+        this.categoryStorage = categoryStorage;
     }
 
     @RequestMapping("/reviews")
@@ -32,8 +32,9 @@ public class ReviewController {
     }
 
     @PostMapping("/add-review")
-    public String addReview(@RequestParam Category reviewCategory, String reviewName, String reviewAuthor, int reviewRating, String reviewText, Date reviewDate){
-        reviewStorage.storeReview(new Review(reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory, reviewName));
+    public String addReview(@RequestParam String reviewAuthor, @RequestParam Integer reviewRating, @RequestParam String reviewText, @RequestParam String categoryName, @RequestParam String reviewName){
+        Category reviewCategory = categoryStorage.findCategoryByName(categoryName);
+        reviewStorage.storeReview(new Review(reviewAuthor, reviewRating, reviewText, reviewCategory, reviewName));
         return "redirect:categories";
     }
 }

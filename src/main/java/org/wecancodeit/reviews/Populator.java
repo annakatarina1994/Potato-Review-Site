@@ -42,29 +42,29 @@ public class Populator implements CommandLineRunner {
 
 
 
-        Review firstReview = new Review("Brad", 4, new Date(), "Very versatile potato. This is the only thing I've eaten for the past month. I had to take off a point because I'm getting sick of them", russet, "A tater for every occasion ");
+        Review firstReview = new Review("Brad", 4, "Very versatile potato. This is the only thing I've eaten for the past month. I had to take off a point because I'm getting sick of them", russet, "A tater for every occasion ");
         reviewStorage.storeReview(firstReview);
-        Review secondReview = new Review("Wilbur", 5, new Date(), "I loved it. I mashed them all up and ate them with a side of whiskey. Great flavor! ", yellow, "Excellent");
+        Review secondReview = new Review("Wilbur", 5, "I loved it. I mashed them all up and ate them with a side of whiskey. Great flavor! ", yellow, "Excellent");
         reviewStorage.storeReview(secondReview);
-        Review thirdReview = new Review("Big Hungry Joe", 5, new Date(), "I'm a big hungry man. I really enjoy these potatoes because they can be huge and taste great ", russet, "Great!");
+        Review thirdReview = new Review("Big Hungry Joe", 5, "I'm a big hungry man. I really enjoy these potatoes because they can be huge and taste great ", russet, "Great!");
         reviewStorage.storeReview(thirdReview);
-        Review fourthReview = new Review("Gretel", 3, new Date(), "They were good and everything, nothing too special. Vey standard", yellow, "Just ok");
+        Review fourthReview = new Review("Gretel", 3, "They were good and everything, nothing too special. Vey standard", yellow, "Just ok");
         reviewStorage.storeReview(fourthReview);
-        Review fifthReview = new Review("Bort", 1, new Date(), "I had no idea how to prepare this potato, there were no instructions! Now my uncle is in the hospital", blue, "NO INSTRUCTIONS");
+        Review fifthReview = new Review("Bort", 1,  "I had no idea how to prepare this potato, there were no instructions! Now my uncle is in the hospital", blue, "NO INSTRUCTIONS");
         reviewStorage.storeReview(fifthReview);
-        Review sixthReview = new Review("Gillian", 4, new Date(), " Never heard of a blue potato until now, surprised! Might definately try again.", blue, "Not bad!");
+        Review sixthReview = new Review("Gillian", 4,  " Never heard of a blue potato until now, surprised! Might definately try again.", blue, "Not bad!");
         reviewStorage.storeReview(sixthReview);
-        Review seventhReview = new Review("Henry", 5, new Date(), "What a darn tasty tater! I love them so much. My dog does not enjoy them so much. ", red, "WOW");
+        Review seventhReview = new Review("Henry", 5, "What a darn tasty tater! I love them so much. My dog does not enjoy them so much. ", red, "WOW");
         reviewStorage.storeReview(seventhReview);
-        Review eighthReview = new Review("Bimmy", 3, new Date(), "I didn't like it, too bitter. However, my neighbor choked on one, and he's a jerk. High Five! ", red, "meh");
+        Review eighthReview = new Review("Bimmy", 3, "I didn't like it, too bitter. However, my neighbor choked on one, and he's a jerk. High Five! ", red, "meh");
         reviewStorage.storeReview(eighthReview);
-        Review ninthReview = new Review("MaryBeth", 1, new Date(), "Had these on the side of fermented fish. These potatoes made me feel very ill, would not recommend ", white, "made me sick");
+        Review ninthReview = new Review("MaryBeth", 1,  "Had these on the side of fermented fish. These potatoes made me feel very ill, would not recommend ", white, "made me sick");
         reviewStorage.storeReview(ninthReview);
-        Review tenthReview = new Review("Sam", 5, new Date(), "I love all potatoes, my favorite food. Boil 'em, mash 'em, stick 'em in a stew", white, "lovely");
+        Review tenthReview = new Review("Sam", 5, "I love all potatoes, my favorite food. Boil 'em, mash 'em, stick 'em in a stew", white, "lovely");
         reviewStorage.storeReview(tenthReview);
-        Review eleventhReview = new Review("Mark", 2, new Date(), "I was eating these in a dark cave and accidentally ate one of my fingers", fingerling, "ouch");
+        Review eleventhReview = new Review("Mark", 2, "I was eating these in a dark cave and accidentally ate one of my fingers", fingerling, "ouch");
         reviewStorage.storeReview(eleventhReview);
-        Review twelthReview = new Review("Mr. Moppet", 4, new Date(), "My great grandpa's friend brought me a sack of these back from his trip to Machu Pichu. Highly recommended", fingerling, "very tasty");
+        Review twelthReview = new Review("Mr. Moppet", 4, "My great grandpa's friend brought me a sack of these back from his trip to Machu Pichu. Highly recommended", fingerling, "very tasty");
         reviewStorage.storeReview(twelthReview);
        }
 }
