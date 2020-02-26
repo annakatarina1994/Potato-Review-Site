@@ -9,7 +9,6 @@ public class HashtagStorageJpaImpl implements HashtagStorage {
 
    private HashtagRepository hashtagRepository;
 
-
     public HashtagStorageJpaImpl(HashtagRepository hashtagRepository) {
         this.hashtagRepository=hashtagRepository;
     }

@@ -26,12 +26,12 @@ private CategoryStorage categoryStorage;
         return "ListOfHashtags";
     }
 
-    @RequestMapping("/hashtags/{hashtagId}")
+    @RequestMapping("/hashtag/{hashtagId}")
     public String displaySingleHashtag(@PathVariable Long hashtagId, Model model) {
         Hashtag retrievedHashtag = hashtagStorage.findHashtagById(hashtagId);
-        //Collection<Review> reviewList = reviewStorage.findAllReviews();
+//        Collection<Review> reviewList = reviewStorage.findAllReviews();
         model.addAttribute("hashtag", retrievedHashtag);
-       // model.addAttribute("reviews", reviewList);
+//        model.addAttribute("reviews", reviewList);
         return "hashtag";
     }
 }

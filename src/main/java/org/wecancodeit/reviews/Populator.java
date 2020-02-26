@@ -12,7 +12,6 @@ public class Populator implements CommandLineRunner {
     ReviewStorage reviewStorage;
     HashtagStorage hashtagStorage;
 
-
     public Populator(CategoryStorage categoryStorage, ReviewStorage reviewStorage, HashtagStorage hashtagStorage){
         this.categoryStorage = categoryStorage;
         this.reviewStorage = reviewStorage;
@@ -40,8 +39,6 @@ public class Populator implements CommandLineRunner {
         Hashtag hashtag2 = new Hashtag("Lumpy");
         hashtagStorage.storeHashtag(hashtag2);
 
-
-
         Review firstReview = new Review("Brad", 4, "Very versatile potato. This is the only thing I've eaten for the past month. I had to take off a point because I'm getting sick of them", russet, "A tater for every occasion ");
         reviewStorage.storeReview(firstReview);
         Review secondReview = new Review("Wilbur", 5, "I loved it. I mashed them all up and ate them with a side of whiskey. Great flavor! ", yellow, "Excellent");
@@ -64,7 +61,7 @@ public class Populator implements CommandLineRunner {
         reviewStorage.storeReview(tenthReview);
         Review eleventhReview = new Review("Mark", 2, "I was eating these in a dark cave and accidentally ate one of my fingers", fingerling, "ouch");
         reviewStorage.storeReview(eleventhReview);
-        Review twelthReview = new Review("Mr. Moppet", 4, "My great grandpa's friend brought me a sack of these back from his trip to Machu Pichu. Highly recommended", fingerling, "very tasty");
-        reviewStorage.storeReview(twelthReview);
+        Review twelfthReview = new Review("Mr. Moppet", 4, "My great grandpa's friend brought me a sack of these back from his trip to Machu Pichu. Highly recommended", fingerling, "very tasty");
+        reviewStorage.storeReview(twelfthReview);
        }
 }
