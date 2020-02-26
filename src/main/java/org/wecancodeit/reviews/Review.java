@@ -15,11 +15,8 @@ public class Review {
     private String reviewText;
     @ManyToOne
     private Category reviewCategory;
-
-
     @ManyToMany
-    private Collection<Hashtag> reviewHashTags = new ArrayList<>();
-
+    private Set<Hashtag> hashtags;
 
     public Review() {
     }
@@ -31,12 +28,13 @@ public class Review {
         this.reviewText = reviewText;
         this.reviewCategory = reviewCategory;
         this.reviewName = reviewName;
-        this.reviewHashTags = getReviewHashTags();
+        this.hashtags = new HashSet<>();
     }
 
-    public Collection<Hashtag> getReviewHashTags() {
-        return reviewHashTags;
+    public Collection<Hashtag> getHashtags(){
+        return hashtags;
     }
+
     public String getReviewName() {
         return reviewName;
     }
@@ -65,7 +63,9 @@ public class Review {
         return id;
     }
 
-
+    public void addHashtag(Hashtag hashtagToAdd){
+        hashtags.add(hashtagToAdd);
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -79,12 +79,10 @@ public class Review {
                 Objects.equals(reviewRating, review.reviewRating) &&
                 Objects.equals(reviewText, review.reviewText) &&
                 Objects.equals(id, review.id);
-
-
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory, reviewName, id, reviewHashTags);
+        return Objects.hash(reviewAuthor, reviewRating, reviewDate, reviewText, reviewCategory, reviewName, id, hashtags);
     }
 }

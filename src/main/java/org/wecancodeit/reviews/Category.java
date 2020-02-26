@@ -50,11 +50,13 @@ public class Category {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Category category = (Category) o;
-        return Objects.equals(categoryName, category.categoryName);
+        return Objects.equals(id, category.id) &&
+                Objects.equals(categoryName, category.categoryName) &&
+                Objects.equals(categoryDescription, category.categoryDescription);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(categoryName);
+        return Objects.hash(id, categoryName, categoryDescription);
     }
 }
