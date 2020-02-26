@@ -13,7 +13,7 @@ public class Hashtag{
     @Id
     @GeneratedValue
     private Long id;
-    private String hashtagName;
+    private String name;
     @ManyToMany(mappedBy = "hashtags")
     private Collection<Review> reviews;
 
@@ -24,14 +24,14 @@ public class Hashtag{
     }
 
 
-    public Hashtag(String hashtagName) {
+    public Hashtag(String name) {
         reviews = new ArrayList<>();
-        this.hashtagName = hashtagName;
+        this.name = name;
     }
 
-    public String getHashtagName() {
+    public String getName() {
 
-        return hashtagName;
+        return name;
     }
 
     protected Hashtag(){}
@@ -42,12 +42,12 @@ public class Hashtag{
         if (o == null || getClass() != o.getClass()) return false;
         Hashtag hashtag = (Hashtag) o;
         return Objects.equals(id, hashtag.id) &&
-                Objects.equals(hashtagName, hashtag.hashtagName);
+                Objects.equals(name, hashtag.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, hashtagName);
+        return Objects.hash(id, name);
     }
 }
 

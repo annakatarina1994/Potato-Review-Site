@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="hashtag">
-                    <div th:each="hashtag:${review.hashtags}" th:text ="${hashtag.hashtagName}"></div>
+                    <div th:each="hashtag:${review.hashtags}" th:text ="${hashtag.name}"></div>
                     <br>
                     <form th:action="'/review/'+${review.id}+'/add-hashtag'" method="POST">
 
