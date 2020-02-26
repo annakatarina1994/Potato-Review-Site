@@ -44,13 +44,13 @@ public class ReviewController {
 
     @PostMapping("/review/{id}/add-hashtag")
 
-    public String addHashtagtoReview(@RequestParam String hashTagName, @PathVariable Long id){
+    public String addHashtagtoReview(@RequestParam String name, @PathVariable Long id){
 
        Hashtag hashtagToAddToReview;
-       Optional<Hashtag> hashtagOptional = hashtagRepository.findByName(hashTagName);
+       Optional<Hashtag> hashtagOptional = hashtagRepository.findByName(name);
 
        if(hashtagOptional.isEmpty()){
-           hashtagToAddToReview = new Hashtag(hashTagName);
+           hashtagToAddToReview = new Hashtag(name);
            hashtagRepository.save(hashtagToAddToReview);
        }else{
            hashtagToAddToReview = hashtagOptional.get();
