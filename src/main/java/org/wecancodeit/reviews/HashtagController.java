@@ -5,8 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Collection;
-
 @Controller
 public class HashtagController {
 
@@ -26,9 +24,9 @@ private CategoryStorage categoryStorage;
         return "ListOfHashtags";
     }
 
-    @RequestMapping("/hashtag/{hashtagId}")
-    public String displaySingleHashtag(@PathVariable Long hashtagId, Model model) {
-        Hashtag retrievedHashtag = hashtagStorage.findHashtagById(hashtagId);
+    @RequestMapping("/hashtag/{hashtagName}")
+    public String displaySingleHashtag(@PathVariable String hashtagName, Model model) {
+        Hashtag retrievedHashtag = hashtagStorage.findHashtagByName(hashtagName);
 //        Collection<Review> reviewList = reviewStorage.findAllReviews();
         model.addAttribute("hashtag", retrievedHashtag);
 //        model.addAttribute("reviews", reviewList);
