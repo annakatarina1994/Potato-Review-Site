@@ -4,7 +4,6 @@ body {
     background-size: cover;
 }
 
-
 h1 {
     padding-bottom: 1px;
     margin-top: 0px;
@@ -62,7 +61,7 @@ a:hover {
 }
 
 .title {
-    background-color: rgba(246, 248, 91, 0.45);
+    background-color: rgba(246, 248, 91, 0.45));
     border: 1px solid yellow;
     font-family: 'Saira Stencil One', cursive;
 }
@@ -149,7 +148,7 @@ padding: .3rem;
 }
 
 h4 {
-    color: gray;
+    color: white;
 }
 
 i {
@@ -168,4 +167,8 @@ i {
     text-align: center;
     border: 1px solid yellow;
     background-color: rgba(246, 248, 91, 0.45);
+}
+
+.author{
+    font-color: white;
 }
