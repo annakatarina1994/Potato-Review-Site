@@ -17,12 +17,13 @@ public class Hashtag{
     @ManyToMany(mappedBy = "hashtags")
     private Collection<Review> reviews;
 
-
+    public Collection<Review> getReviews() {
+        return reviews;
+    }
 
     public Long getId() {
         return id;
     }
-
 
     public Hashtag(String name) {
         reviews = new ArrayList<>();
