@@ -10,9 +10,9 @@
     display: grid;
     height: 98vh;
     width: 98vw;
-    grid-template-columns: 15% 1fr;
+    grid-template-columns: 15% 1fr 15%;
     grid-template-rows: 25% 75%;
-    grid-gap: 4px;
+    grid-gap: 10px;
 }
 
 .title {
@@ -28,7 +28,8 @@
 
 .content {
     display: grid;
-    grid-column: 2/ span 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row: 2/ span 2;
     justify-content: center;
 }
