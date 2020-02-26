@@ -58,11 +58,10 @@
                     <br>
                     <form th:action="'/review/'+${review.id}+'/add-hashtag'" method="POST">
 
-                        <input type=" text" name="name">
+                        #<input type=" text" name="name" pattern="[^#]+">
                         <button type ="submit">Add Hashtag</button>
                     </form>
-
-
+                    
                 </div>
 
             </section>
