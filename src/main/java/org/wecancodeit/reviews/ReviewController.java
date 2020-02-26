@@ -7,15 +7,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Optional;
+
 @Controller
 public class ReviewController {
 
     private ReviewStorage reviewStorage;
     private CategoryStorage categoryStorage;
+    private HashtagRepository hashtagRepository;
 
-    public ReviewController(ReviewStorage reviewStorage, CategoryStorage categoryStorage) {
+    public ReviewController(ReviewStorage reviewStorage, CategoryStorage categoryStorage, HashtagRepository hashtagRepository) {
         this.reviewStorage = reviewStorage;
         this.categoryStorage = categoryStorage;
+        this.hashtagRepository= hashtagRepository;
     }
 
     @RequestMapping("/reviews")
@@ -36,5 +40,26 @@ public class ReviewController {
         Category reviewCategory = categoryStorage.findCategoryByName(categoryName);
         reviewStorage.storeReview(new Review(reviewAuthor, reviewRating, reviewText, reviewCategory, reviewName));
         return "redirect:categories";
+    }
+
+    @PostMapping("/review/{id}/add-hashtag")
+
+    public String addHashtagtoReview(@RequestParam String hashTagName, @PathVariable Long id){
+
+       Hashtag hashtagToAddToReview;
+       Optional<Hashtag> hashtagOptional = hashtagRepository.findByName(hashTagName);
+
+       if(hashtagOptional.isEmpty()){
+           hashtagToAddToReview = new Hashtag(hashTagName);
+           hashtagRepository.save(hashtagToAddToReview);
+       }else{
+           hashtagToAddToReview = hashtagOptional.get();
+       }
+
+       Review reviewToAddHashtagTo = reviewStorage.findReviewById(id);
+       reviewToAddHashtagTo.addHashtag(hashtagToAddToReview);
+       reviewStorage.storeReview(reviewToAddHashtagTo);
+       return "redirect:/review/"+ id;
+
     }
 }
