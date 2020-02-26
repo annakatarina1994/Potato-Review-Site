@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet"/>
-    <title>Hashtags</title>
+    <title th:text="${hashtag.name}">Hashtags</title>
     <link rel="stylesheet" href="./css/styles.css" th:href="@{/css/style.css}" type="text/css"/>
     <link rel="stylesheet" href="./css/layout.css" th:href="@{/css/layout.css}" type="text/css"/>
 </head>
@@ -14,7 +14,7 @@
 <div class="container">
     <section class="title">
         <h1>Potato Party!</h1>
-        <h2>Potato Hashtags</h2>
+        <h2 th:text="'#'+${hashtag.name}">Potato Hashtags</h2>
 
     </section>
     <section class="sidebarlinks">

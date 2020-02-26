@@ -33,7 +33,7 @@
     <section class="content">
         <p class="potato__tags">
         <p th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/' + ${hashtag.name}}"
-                                               th:text="${hashtag.name}">Tag</a>
+                                               th:text="'#'+${hashtag.name}">Tag</a>
 
     </p>
     </section>
