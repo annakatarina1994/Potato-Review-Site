@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,11 +31,12 @@
         <a class="submissionsidebar" href="/submissions">Write a review</a><br>
     </section>
     <section class="content">
-        <p class="potato__tags">
-        <p th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/' + ${hashtag.name}}"
-                                               th:text="'#'+${hashtag.name}">Tag</a>
+        <div class="potato__tags">
+            <p th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/' + ${hashtag.name}}"
+                                                th:text="'#'+${hashtag.name}">Tag</a>
 
-    </p>
+            </p>
+        </div>
     </section>
 
 
