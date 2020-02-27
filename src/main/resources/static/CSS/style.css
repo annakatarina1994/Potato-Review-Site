@@ -90,10 +90,12 @@ a:hover {
 }
 
 .potato__categories{
-    padding:10px;
-    margin-left: 36px;
-    font-size: 1rem;
-    font-family: sans-serif;
+    background-color: rgba(83, 31, 1, 0.55);
+    box-sizing: border-box;
+    width: 50rem;
+    border-color: rgba(83, 31, 1, 1);
+    border-style: solid;
+    border-width: 1px;
 }
 
 .potato__categories a{
@@ -188,4 +190,11 @@ i {
     border-color: rgba(83, 31, 1, 1);
     border-style: solid;
     border-width: 1px;
+}
+
+.review {
+    background-color: rgba(83, 31, 1, 0.55);
+    border: 2px solid yellow;
+    text-align: center;
+    box-shadow: 1px 1px 0px 2px lighten(#000, 0.5);
 }

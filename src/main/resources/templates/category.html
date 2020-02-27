@@ -32,14 +32,14 @@
         <a class="submissionsidebar" href="/submissions">Write a review</a><br>
     </section>
     <section class="content">
-        <p class="potato__tags">
+        <div class="potato__tags">
         <ul >
             <li class="review_list_link" th:each="review:${category.getReviews()}">
                 <a class="review-list-links__link" th:href="@{'/review/'+ ${review.id}}"
                    th:text="${review.reviewName}"></a>
             </li>
         </ul>
-        </p>
+        </div>
 
 
     </section>
