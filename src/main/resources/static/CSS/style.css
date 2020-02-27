@@ -33,11 +33,11 @@ a {
     text-decoration: none;
 }
 
-.russetlink{
+.russetlink {
     font-size: 2rem;
 }
 
-.fingerlinglink{
+.fingerlinglink {
     font-size: 2rem;
 }
 
@@ -46,7 +46,7 @@ a:hover {
     transition: all 0.5s ease;
 }
 
-.categories{
+.categories {
     text-decoration: none;
     padding: 3rem;
     font-size: 3rem;
@@ -54,7 +54,7 @@ a:hover {
     background-color: rgba(246, 248, 91, 0.45);
 }
 
-.hashtags{
+.hashtags {
     text-decoration: none;
     padding: 3rem;
     font-size: 3rem;
@@ -70,7 +70,7 @@ a:hover {
     margin: 0 auto;
 }
 
-.sidebarlinks{
+.sidebarlinks {
     background-color: rgba(246, 248, 91, 0.45);
     border: 1px solid yellow;
     color: aliceblue;
@@ -82,14 +82,14 @@ a:hover {
     text-shadow: 1px 1px black;
 }
 
-.content{
+.content {
     padding-left: 2rem;
     padding-right: 2rem;
     color: aliceblue;
 
 }
 
-.potato__categories{
+.potato__categories {
     background-color: rgba(83, 31, 1, 0.55);
     box-sizing: border-box;
     width: 50rem;
@@ -98,30 +98,30 @@ a:hover {
     border-width: 1px;
 }
 
-.potato__categories a{
+.potato__categories a {
     font-size: 2rem;
     margin-right: 2rem;
 }
 
-.potato__categories span{
+.potato__categories span {
     font-size: 1rem;
 }
 
-.cat{
+.cat {
     font-size: 3rem;
     color: aliceblue;
     text-decoration: none;
     text-shadow: 2px 2px black;
 }
 
-.has{
+.has {
     font-size: 3rem;
     color: aliceblue;
     text-decoration: none;
     text-shadow: 2px 2px black;
 }
 
-.mainpagelinks{
+.mainpagelinks {
     text-align: center;
 }
 
@@ -131,29 +131,29 @@ a:hover {
     font-family: 'Saira Stencil One', cursive;
 }
 
-.homesidebar{
+.homesidebar {
     font-size: 1.5rem;
 }
 
-.categoriessidebar{
+.categoriessidebar {
     font-size: 1.5rem;
 }
 
-.hashtagsidebar{
+.hashtagsidebar {
     font-size: 1.5rem;
 }
 
-.submissionsidebar{
+.submissionsidebar {
     font-size: 1.5rem;
 }
 
-.sublinks{
+.sublinks {
     font-size: 1rem;
 }
 
-.sublinks li{
-list-style-type: none;
-padding: .3rem;
+.sublinks li {
+    list-style-type: none;
+    padding: .3rem;
 }
 
 h4 {
@@ -164,11 +164,11 @@ i {
     color: blue;
 }
 
-.review__links a{
+.review__links a {
     font-size: 2rem;
 }
 
-.taglinks{
+.taglinks {
     margin: 1rem auto;
     width: 20rem;
     display: block;
@@ -178,10 +178,11 @@ i {
     background-color: rgba(246, 248, 91, 0.45);
 }
 
-.author{
+.author {
     font-color: white;
 }
-.potato__tags{
+
+.potato__tags {
     /*margin-left: 2rem;*/
     /*margin-right: 2rem;*/
     background-color: rgba(83, 31, 1, 0.55);
@@ -197,4 +198,51 @@ i {
     border: 2px solid yellow;
     text-align: center;
     box-shadow: 1px 1px 0px 2px lighten(#000, 0.5);
+}
+
+
+.add-review {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+
+    background-color: rgba(83, 31, 1, 0.55);
+
+
+}
+
+.add-review div {
+    margin-bottom: 3px;
+    width: 30rem;
+}
+
+.add-review input {
+    width: 30rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+.add-review button {
+    width: 12rem;
+
+    padding: 1rem;
+    font-size: 1.2rem;
+    line-height: -1rem;
+    display: inline-block;
+    background-color: #44A06F;
+    color: white;
+    font-weight: bolder;
+}
+
+.add-review select {
+    width: 30rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+.add-review textarea {
+    width: 30rem;
+    height: 4rem;
+    display: inline-block;
 }

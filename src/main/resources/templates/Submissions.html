@@ -33,32 +33,45 @@
         </section>
         <section class="content">
             <div class="review__form">
-                <form action="add-review" method="POST">
+                <form action="add-review" method="POST" class="add-review">
+
+                    <div>
+                        <label>Author</label><br>
+                        <input name="reviewAuthor" type="text">
+                    </div>
+                    <div>
+                        <label>Potato Rating</label><br>
+                        <select name="reviewRating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div>
+
+                        <label>Potato Review</label> <br>
+                        <textarea cols="50" rows="5" name="reviewText"></textarea>
+                    </div>
+                    <div>
+                        <label>Category</label><br>
+                        <select id="reviewCategory" name="categoryName">
+                            <option th:each="category:${categories}" th:value="${category.categoryName}"
+                                th:text="${category.categoryName}">
+
+                            </option>
 
 
-                    <label>Author</label>
-                    <input name="reviewAuthor" type="text">
-
-                    <label>Potato Rating</label>
-                    <select name="reviewRating">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <label>Potato Review</label>
-                    <textarea name="reviewText"></textarea>
-                    <label>Category</label>
-                    <select id="reviewCategory" name="categoryName">
-                        <option th:each="category:${categories}" th:value="${category.categoryName}" th:text="${category.categoryName}">
-
-                        </option>
-
-                    </select>
-                    <label>Review Title</label>
-                    <input name="reviewName" type="text">
-                    <button type="Submit">Post Review!</button>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Review Title</label><br>
+                        <input name="reviewName" type="text">
+                    </div>
+                    <div>
+                        <button type="Submit">Post Review!</button>
+                    </div>
                 </form>
             </div>
 
