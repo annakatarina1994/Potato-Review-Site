@@ -32,10 +32,10 @@
     </section>
     <section class="content">
         <div class="potato__tags">
-            <p th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/' + ${hashtag.name}}"
+            <li th:each="hashtag:${hashtags}"><a th:href="@{'/hashtag/' + ${hashtag.name}}"
                                                 th:text="'#'+${hashtag.name}">Tag</a>
 
-            </p>
+            </li>
         </div>
     </section>
 

@@ -193,6 +193,12 @@ i {
     border-width: 1px;
 }
 
+.potato__tags li{
+    width: 10em;
+    float: left;
+    list-style-type: none;
+}
+
 .review {
     background-color: rgba(83, 31, 1, 0.55);
     border: 2px solid yellow;

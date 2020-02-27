@@ -24,6 +24,8 @@ public class WebLayerTest {
     ReviewStorage reviewStorage;
     @MockBean
     HashtagStorage hashtagStorage;
+    @MockBean
+    ReviewController reviewController;
 
     @Test
     public void categoriesShouldBeOkAndReturnTheViewWithModelAttribute() throws Exception {

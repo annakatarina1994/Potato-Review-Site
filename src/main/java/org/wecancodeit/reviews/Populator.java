@@ -34,10 +34,6 @@ public class Populator implements CommandLineRunner {
         categoryStorage.storeCategory(yellow);
         Category fingerling = new Category("Fingerling", "A small finger shaped potato that grows small and narrow");
         categoryStorage.storeCategory(fingerling);
-        Hashtag hashtag1 = new Hashtag("Tasty Tator");
-         hashtagStorage.storeHashtag(hashtag1);
-        Hashtag hashtag2 = new Hashtag("Lumpy");
-        hashtagStorage.storeHashtag(hashtag2);
 
         Review firstReview = new Review("Brad", 4, "Very versatile potato. This is the only thing I've eaten for the past month. I had to take off a point because I'm getting sick of them", russet, "A tater for every occasion ");
         reviewStorage.storeReview(firstReview);
