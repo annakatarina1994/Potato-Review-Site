@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CategoryController {
 
     private CategoryStorage categoryStorage;
-
     private ReviewStorage reviewStorage;
 
     public CategoryController(CategoryStorage categoryStorage,ReviewStorage reviewStorage) {
